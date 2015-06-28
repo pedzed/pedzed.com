@@ -1,0 +1,36 @@
+#home {
+    position: relative;
+    z-index: 200;
+    background: #111;
+    padding: 200px 0 0 0;
+    
+    .intro {
+        text-align: center;
+        padding-bottom: 160px;
+    }
+    
+    h1 {
+        font-size: 2.3rem;
+        color: #eee;
+    }
+    
+    p {
+        font-size: 1.4rem;
+        color: #777;
+    }
+}
+
+@media #{$small-up} {}
+@media #{$small-only} {}
+
+@media #{$medium-up} {}
+@media #{$medium-only} {}
+
+@media #{$large-up} {}
+@media #{$large-only} {}
+
+@media #{$xlarge-up} {}
+@media #{$xlarge-only} {}
+
+@media #{$xxlarge-up} {}
+@media #{$xxlarge-only} {}

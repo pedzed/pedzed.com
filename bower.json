@@ -1,15 +1,8 @@
 {
-    "name": "ped's portfolio",
+    "name": "pedzed",
     "dependencies": {
-        "foundation": "~5.5.1",
-        "jquery": "~2.1.0",
+        "foundation": "~5.5.2",
+        "jquery": "~2.1.4",
         "font-awesome": "~4.3.0"
-    },
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ]
+    }
 }

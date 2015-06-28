@@ -1,52 +1,80 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Main SASS file
 ---
+
 @charset "utf-8";
 
+@import "_functions";
+@import "_settings";
 
+@import "partials/_header";
+@import "partials/_footer";
+@import "partials/_home";
+@import "partials/_about";
+@import "partials/_portfolio";
+@import "partials/_contact";
 
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+body {
+    overflow-x: hidden;
+}
 
-$spacing-unit:     30px;
+.full-width {
+    width: 100%;
+    max-width: 100%;
+}
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+#main-button {
+    position: relative;
+    z-index: 0;
+}
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+section:not(:first-of-type) {
+    position: relative;
+    z-index: 200;
+    min-height: 100vh;
+    padding: 64px 0;
+    
+    article:not(:first-of-type) {
+        margin: 32px 0;
+    }
+    
+    h1 {
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 3rem;
+        color: #eee;
+    }
+    
+    h3 {
+        font-family: Arial;
+    }
 
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
+    p {
+        color: #eee;
+    }
+    
+    a {
+        color: #222;
+        border-bottom: 1px dashed;
+        @include transition;
+        
+        &:hover {
+            color: scale-color($primary-color, $lightness: -30%);
+        }
     }
 }
 
+@media #{$small-up} {}
+@media #{$small-only} {}
 
+@media #{$medium-up} {}
+@media #{$medium-only} {}
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+@media #{$large-up} {}
+@media #{$large-only} {}
+
+@media #{$xlarge-up} {}
+@media #{$xlarge-only} {}
+
+@media #{$xxlarge-up} {}
+@media #{$xxlarge-only} {}

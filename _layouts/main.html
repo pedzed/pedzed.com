@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8" />
+        
+        <title>{{ site.title }}</title>
+        
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <![endif]-->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="{{ site.description }}" />
+        
+        <link rel="stylesheet" href="{{ '/vendor/bower_components/font-awesome/css/font-awesome.min.css' | prepend: site.baseurl }}" />
+        <link rel="stylesheet" href="{{ '/css/foundation.css' | prepend: site.baseurl }}" />
+        <link rel="stylesheet" href="{{ '/vendor/bower_components/animate.css/animate.min.css' | prepend: site.baseurl }}" />
+        <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}" />
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    </head>
+    <body>
+        <header class="main clearfix">
+            <div class="row full-width">
+                <div class="columns">
+                    <nav class="main right">
+                        <ul>
+                            <li>
+                                <a href="{{ site.baseurl }}"
+                                   class="smooth-scroll"
+                               >Home</a>
+                            </li>
+                            <li>
+                                <a href="#about"
+                                   class="smooth-scroll"
+                               >Over mij</a>
+                            </li>
+                            {% comment %}
+                                <li>
+                                    <a href="#portfolio"
+                                       class="smooth-scroll"
+                                   >Mijn portfolio</a>
+                                </li>
+                            {% endcomment %}
+                            <li>
+                                <a href="#contact"
+                                   class="smooth-scroll"
+                               >Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        
+        <main role="main">
+            {{ content }}
+        </main>
+        
+        <footer class="main">
+            <div class="row">
+                <div class="columns">
+                    Copyright &copy; pedzed 2015
+                </div>
+            </div>
+        </footer>
+        
+        <script src="{{ '/vendor/bower_components/jquery/dist/jquery.min.js' | prepend: site.baseurl }}"></script>
+        {% comment %}<script src="{{ '/vendor/bower_components/foundation/js/foundation.min.js' | prepend: site.baseurl }}"></script>{% endcomment %}
+        <script src="{{ '/vendor/bower_components/jquery-smooth-scroll/jquery.smooth-scroll.min.js' | prepend: site.baseurl }}"></script>
+        <script src="{{ '/js/main.js' | prepend: site.baseurl }}"></script>
+    </body>
+</html>
