@@ -18,44 +18,6 @@
         text-align: center;
         padding-bottom: 64px;
     }
-    
-    .browsers {
-        // width: 960px;
-        // height: 455px;
-        // margin: auto;
-        
-        // .browser {
-        //     position: absolute;
-        //     left: 50%;
-        //     bottom: 0;
-        //     background-size: contain;
-        //     background-position: center center;
-        //     background-repeat: no-repeat;
-            
-        //     &.main {
-        //         z-index: 100;
-        //         width: 739px;
-        //         height: 445px;
-        //         margin-left: -370px;
-        //         background-image: url('../images/browser.png');
-        //     }
-            
-        //     &.secondary {
-        //         z-index: 50;
-        //         background-image: url('../images/browser-secondary.png');
-        //         height: 338px;
-        //         width: 525px;
-                
-        //         &.browser-left {
-        //             margin-left: -475px;
-        //         }
-                
-        //         &.browser-right {
-        //             margin-left: -50px;
-        //         }
-        //     }
-        // }
-    }
 }
 
 @media #{$small-up} {
@@ -68,7 +30,6 @@
             left: 50%;
             bottom: 0;
             background-size: 100%;
-            // background-position: top center;
             background-repeat: no-repeat;
             
             &.main {
@@ -108,23 +69,19 @@
 @media #{$medium-only} {}
 
 @media #{$large-up} {
-    .browsers {
-        .browser {
-            &.secondary {
-                z-index: 50;
-                height: 338px;
-                width: 525px;
-                
-                &.browser-left {
-                    background-image: url('../images/browser-secondary-zocheap.png');
-                    margin-left: -475px;
-                }
-                
-                &.browser-right {
-                    background-image: url('../images/browser-secondary-fullkick.png');
-                    margin-left: -50px;
-                }
-            }
+    .browsers .browser.secondary {
+        z-index: 50;
+        height: 338px;
+        width: 525px;
+        
+        &.browser-left {
+            background-image: url('../images/browser-secondary-zocheap.png');
+            margin-left: -475px;
+        }
+        
+        &.browser-right {
+            background-image: url('../images/browser-secondary-fullkick.png');
+            margin-left: -50px;
         }
     }
 }
