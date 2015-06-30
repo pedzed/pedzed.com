@@ -1,9 +1,10 @@
 {
-    "name": "pedzed",
-    "dependencies": {
-        "jquery": "~2.1.4",
-        "foundation": "~5.5.2",
-        "animate.css": "~3.3.0",
-        "font-awesome": "~4.3.0"
-    }
+  "name": "pedzed",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "foundation": "~5.5.2",
+    "animate.css": "~3.3.0",
+    "font-awesome": "~4.3.0",
+    "jquery-smooth-scroll": "~1.5.5"
+  }
 }
