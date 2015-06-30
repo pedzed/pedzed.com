@@ -20,26 +20,97 @@
     }
     
     .browsers {
+        // width: 960px;
+        // height: 455px;
+        // margin: auto;
+        
+        // .browser {
+        //     position: absolute;
+        //     left: 50%;
+        //     bottom: 0;
+        //     background-size: contain;
+        //     background-position: center center;
+        //     background-repeat: no-repeat;
+            
+        //     &.main {
+        //         z-index: 100;
+        //         width: 739px;
+        //         height: 445px;
+        //         margin-left: -370px;
+        //         background-image: url('../images/browser.png');
+        //     }
+            
+        //     &.secondary {
+        //         z-index: 50;
+        //         background-image: url('../images/browser-secondary.png');
+        //         height: 338px;
+        //         width: 525px;
+                
+        //         &.browser-left {
+        //             margin-left: -475px;
+        //         }
+                
+        //         &.browser-right {
+        //             margin-left: -50px;
+        //         }
+        //     }
+        // }
+    }
+}
+
+@media #{$small-up} {
+    .browsers {
         width: 960px;
-        height: 455px;
+        height: 300px;
         margin: auto;
         
         .browser {
             position: absolute;
             left: 50%;
             bottom: 0;
-            background-size: contain;
-            background-position: center center;
+            background-size: 100%;
+            // background-position: top center;
             background-repeat: no-repeat;
             
             &.main {
+                bottom: -212px;
                 z-index: 100;
+                width: 262px;
+                height: 512px;
+                margin-left: -131px;
+                background-image: url('../images/smartphone.png');
+            }
+        }
+    }
+}
+
+@media #{$small-only} {}
+
+@media #{$screen} and (min-width:#{em-calc(800)}) {
+    .browsers {
+        width: 960px;
+        height: 455px;
+        
+        .browser {
+            background-size: contain;
+            
+            &.main {
+                bottom: 0;
                 width: 739px;
                 height: 445px;
                 margin-left: -370px;
                 background-image: url('../images/browser.png');
             }
-            
+        }
+    }
+}
+
+@media #{$medium-up} {}
+@media #{$medium-only} {}
+
+@media #{$large-up} {
+    .browsers {
+        .browser {
             &.secondary {
                 z-index: 50;
                 background-image: url('../images/browser-secondary.png');
@@ -58,13 +129,6 @@
     }
 }
 
-@media #{$small-up} {}
-@media #{$small-only} {}
-
-@media #{$medium-up} {}
-@media #{$medium-only} {}
-
-@media #{$large-up} {}
 @media #{$large-only} {}
 
 @media #{$xlarge-up} {}
