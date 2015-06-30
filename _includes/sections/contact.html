@@ -11,7 +11,7 @@
                 E-mails worden uiteraard altijd gelezen en indien gewenst, binnen 48 uur beantwoord.
             </p>
             
-            <form method="POST" action="#">
+            <form method="POST" action="//formspree.io/pedzed@outlook.com">
                 <div class="field reveal-on-scroll"
                      data-reveal-animation="slideInLeft"
                 >
@@ -36,6 +36,11 @@
                     </label>
                 </div>
                 
+                <input type="hidden"
+                       name="_subject"
+                       value="Contact verzoek {{ site.name }}"
+                />
+                
                 <div class="field reveal-on-scroll"
                      data-reveal-animation="slideInLeft"
                 >
@@ -44,6 +49,8 @@
                         <textarea name="message"></textarea>
                     </label>
                 </div>
+                
+                <input type="text" name="_gotcha" style="display:none;" />
                 
                 <button type="submit"
                         class="secondary reveal-on-scroll"

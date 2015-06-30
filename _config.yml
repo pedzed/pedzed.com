@@ -1,4 +1,4 @@
-url: "http://yourdomain.com"
+name: pedzed.github.io
 baseurl: ""
 port: 8080
 
@@ -6,7 +6,6 @@ title: Ped Zed - Web ontwikkelaar
 email: pedzed@outlook.com
 description: >
     Op zoek naar een web ontwikkelaar? Bij mij kun je terecht voor alles op het gebied van internet.
-github_username: pedzed
 
 exclude:
     - bower.json
