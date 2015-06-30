@@ -8,6 +8,14 @@
     //     revealOnScroll();
     // }, 100);
     
+    var animationElements = $('.reveal-on-scroll:not(.animated)');
+    
+    animationElements.each(function() {
+        $(this).css({
+            'visibility': 'hidden'
+        }); 
+    });
+    
     $(window).on('load scroll', function() {
         revealOnScroll();
     });
@@ -15,21 +23,21 @@
     function revealOnScroll() {
         var verticalScrollPosition = $(window).scrollTop();
         
-        $('.reveal-on-scroll:not(.animated)').each(function() {
-            var offsetTop = $(this).offset().top;
+        animationElements.each(function() {
+            var animationElement = $(this);
+            
+            var offsetTop = animationElement.offset().top;
             var windowHeight = $(window).height();
             
             if(verticalScrollPosition + windowHeight > offsetTop) {
-                $(this).css({
-                    'visibility': 'visible'
-                });
-                
-                $(this).addClass($(this).data('reveal-animation'));
-                $(this).addClass('animated');
-            } else {
-                $(this).css({
-                    'visibility': 'hidden'
-                });
+                setTimeout(function() {
+                    animationElement.css({
+                        'visibility': 'visible'
+                    });
+                    
+                    animationElement.addClass(animationElement.data('reveal-animation'));
+                    animationElement.addClass('animated');
+                }, animationElement.data('reveal-after'));
             }
         });
     }

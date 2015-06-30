@@ -4,11 +4,6 @@
     background: #111;
     padding: 200px 0 0 0;
     
-    .intro {
-        text-align: center;
-        padding-bottom: 160px;
-    }
-    
     h1 {
         font-size: 2.3rem;
         color: #eee;
@@ -17,6 +12,49 @@
     p {
         font-size: 1.4rem;
         color: #777;
+    }
+    
+    .intro {
+        text-align: center;
+        padding-bottom: 64px;
+    }
+    
+    .browsers {
+        width: 960px;
+        height: 455px;
+        margin: auto;
+        
+        .browser {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            
+            &.main {
+                z-index: 100;
+                width: 739px;
+                height: 445px;
+                margin-left: -370px;
+                background-image: url('../images/browser.png');
+            }
+            
+            &.secondary {
+                z-index: 50;
+                background-image: url('../images/browser-secondary.png');
+                height: 338px;
+                width: 525px;
+                
+                &.browser-left {
+                    margin-left: -475px;
+                }
+                
+                &.browser-right {
+                    margin-left: -50px;
+                }
+            }
+        }
     }
 }
 
