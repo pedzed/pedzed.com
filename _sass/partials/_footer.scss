@@ -2,7 +2,7 @@ footer.main {
     position: relative;
     background: $blue-secondary;
     color: scale-color($blue, $lightness: 80%);
-    padding: 12px 0;
+    padding: 16px 0;
 }
 
 @media #{$small-up} {}
