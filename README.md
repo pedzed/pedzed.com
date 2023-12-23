@@ -1,6 +1,3 @@
-# pedzed.github.io
+# www.pedzed.com
 
-Mijn persoonlijke website.  
-My personal website.
-
-https://pedzed.github.io
+https://www.pedzed.com
